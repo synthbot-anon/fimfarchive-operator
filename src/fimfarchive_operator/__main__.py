@@ -2,7 +2,7 @@ import argparse
 from typing import Optional, Union
 
 from itllib import Itl
-from itllib.controllers.propagating_controller import (
+from itllib.controllers import (
     PropagationOperator,
     PropagableConfig,
     ConfigUri,
@@ -40,7 +40,10 @@ class FimfarchiveConfig(PropagableConfig):
 def get_upstream_commit(upstream) -> HuggingFaceCommit:
     if isinstance(upstream, ConfigUri):
         # Load the dataset and get the commit id
-        upstream_config = FimfarchiveConfig(**httpx.get(upstream.configUri).json())
+        upstream_config_dict = httpx.get(upstream.configUri).json()
+        if upstream_config_dict == None:
+            return None
+        upstream_config = FimfarchiveConfig(**upstream_config_dict)
         if not upstream_config.status:
             return None
         if not upstream_config.status.lastCommit:
