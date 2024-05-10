@@ -40,7 +40,7 @@ kind: Fimfarchive
 metadata:
   name: 'recent-twilight-stories'
 spec:
-  repo: "synthbot/fimfarchive-test-ignore"
+  repo: "synthbot/fimfarchive-recent-twilight"
   filters: Twilight Sparkle, .created > "2023-01-01"
 refs:
   upstream:
