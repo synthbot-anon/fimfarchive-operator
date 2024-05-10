@@ -1,7 +1,5 @@
 # Fimfarchive Operator
 
->NOTE: This project requires a version of itllib that's not yet public. I'll fix that soon.
-
 This project is for deriving & maintaining datasets from the [Fimfarchive](https://www.fimfiction.net/user/116950/Fimfarchive).
 It requires some initial dataset uploaded to HuggingFace. Check the notebookes in [horsewords-lib](https://github.com/synthbot-anon/horsewords-lib) for how to do that, or use an [existing repo](https://huggingface.co/datasets/synthbot/fimfarchive) with the data.
 
