@@ -7,7 +7,7 @@ It requires some initial dataset uploaded to HuggingFace. Check the notebookes i
 
 
 ## Installation
-`pip install --upgrade git+https://github.com/synthbot-anon/fimfarchive_operator`
+`pip install --upgrade git+https://github.com/synthbot-anon/fimfarchive-operator`
 
 
 ## Overview
