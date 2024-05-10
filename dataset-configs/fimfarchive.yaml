@@ -1,0 +1,9 @@
+apiVersion: synthbot.fimfarchive/v1
+kind: Fimfarchive
+metadata:
+  name: 'fimfarchive'
+spec:
+  repo: "synthbot/fimfarchive"
+refs:
+  notification:
+    streamUri: "stream://dataset-streams/fimfarchive"

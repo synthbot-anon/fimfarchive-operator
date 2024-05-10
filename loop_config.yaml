@@ -1,0 +1,26 @@
+apiVersion: thatone.ai/v1
+kind: ResourceSpec
+metadata:
+  name: synthbot-datasets
+spec:
+  clients:
+  - name: synthbot
+    namespace: https://resources.thatone.ai
+  groups:
+  - name: controllers
+    owner: synthbot
+    includeClients: [synthbot]
+  - name: public
+    owner: synthbot
+    public: true
+  loops:
+  - name: dataset-streams
+    owner: synthbot
+    dacWhitelistRead: [public]
+    dacWhitelistWrite: [controllers]
+  clusters:
+  - name: synthbot-datasets
+    owner: synthbot
+    dacWhitelistRead: [public]
+    dacWhitelistWrite: [controllers]
+    dacDefaultExecute: [controllers]

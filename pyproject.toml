@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "fimfarchive_operator"
+version = "0.0.1"
+authors = [
+  { name="Synthbot Anon", email="synthbot.anon@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "itllib",
+  "loopctl",
+  "datasets",
+  "huggingface_hub",
+  "httpx",
+  "pydantic",
+  "lark",
+  "httpx",
+  "fire"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+]
+
